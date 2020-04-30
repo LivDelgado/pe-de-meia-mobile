@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "PeDeMeia",
     "slug": "pe-de-meia-mobile",
     "platforms": [
       "ios",
@@ -14,7 +14,7 @@
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#220A40"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
