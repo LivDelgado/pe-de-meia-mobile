@@ -3,6 +3,8 @@ const tintColor = '#2f95dc';
 export default {
   pdmAmarelo: '#FFCB0D',
   pdmRoxo: '#220A40',
+  pdmRoxo1: '#360F66',
+  pdmAzul: '#26ACFF',
   tintColor,
   tabIconDefault: '#ccc',
   tabIconSelected: tintColor,
