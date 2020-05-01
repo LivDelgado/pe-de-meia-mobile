@@ -4,9 +4,11 @@ import { useNavigation } from '@react-navigation/native';
 import Constants from 'expo-constants';
 
 import Colors from '../constants/Colors';
-import logo from '../assets/images/logo.png';
 
-export default function BeforeLogin() {
+export default function TutorialPresentation() {
     const navigation = useNavigation();
 
+    return (
+        <Text>Apresentação do Tutorial</Text>
+    );
 }
