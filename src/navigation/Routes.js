@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTabNavigator from '../navigation/BottomTabNavigator';
 import AppPresentation from '../screens/AppPresentation';
+import BeforeLogin from '../screens/BeforeLogin';
 const Stack = createStackNavigator();
 
 export default function Routes({ containerRef, initialNavigationState }) {
@@ -13,6 +14,7 @@ export default function Routes({ containerRef, initialNavigationState }) {
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="AppPresentation" component={AppPresentation} />
+            <Stack.Screen name="BeforeLogin" component={BeforeLogin} />
             <Stack.Screen name="Root" component={BottomTabNavigator} />
           </Stack.Navigator>
         </NavigationContainer>
