@@ -55,6 +55,9 @@ export default function AppPresentation() {
             /> */
             }
             <Button
+                onPress = { () => {
+                    if(currentIndex != 2) setCurrentIndex(2) 
+                }}
                 containerStyle = {{
                     width: 180,
                     borderColor: Colors.pdmAmarelo
