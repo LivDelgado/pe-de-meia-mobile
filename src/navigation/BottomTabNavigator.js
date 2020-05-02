@@ -12,9 +12,6 @@ const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'finances-dashboard';
 
 export default function BottomTabNavigator({ navigation, route }) {
-  // Set the header title on the parent stack navigator depending on the
-  // currently active tab. Learn more in the documentation:
-  // https://reactnavigation.org/docs/en/screen-options-resolution.html
   navigation.setOptions({ headerTitle: getHeaderTitle(route) });
 
   return (
@@ -84,10 +81,10 @@ function getHeaderTitle(route) {
     case 'finances-dashboard':
       return 'DASHBOARD';
     case 'accounts':
-      return 'Contas';
+      return 'CONTAS';
     case 'game-progress':
-      return 'Progresso';
+      return 'PROGRESSO';
     case 'tutorial':
-      return 'Tutorial';
+      return 'TUTORIAL';
   }
 }

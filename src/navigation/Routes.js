@@ -8,6 +8,7 @@ import BeforeLogin from '../screens/BeforeLogin';
 import Login from '../screens/Login';
 import SignUp from '../screens/SignUp';
 import TutorialPresentation from '../screens/TutorialPresentation';
+import TabApp from './TabApp';
 const Stack = createStackNavigator();
 
 export default function Routes({ containerRef, initialNavigationState }) {
@@ -21,7 +22,7 @@ export default function Routes({ containerRef, initialNavigationState }) {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="TutorialPresentation" component={TutorialPresentation} />
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="Root" component={TabApp} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

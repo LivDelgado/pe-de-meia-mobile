@@ -8,9 +8,10 @@ export default function(containerRef) {
       Root: {
         path: 'root',
         screens: {
-          Home: 'home',
-          Links: 'links',
-          Settings: 'settings',
+          FinancesDashboard: 'finances-dashboard',
+          Accounts: 'accounts',
+          GameProgressDashboard: 'game-progress',
+          Tutorial: 'tutorial'
         },
       },
     },
