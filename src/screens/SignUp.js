@@ -125,11 +125,11 @@ const styles = StyleSheet.create({
         marginBottom: 40
     },
     descricaoTela: {
-        width: 324,
+        marginRight: 35,
         marginLeft: 36,
         fontSize: 24.91,
         color: '#E5E5E5',
-        fontFamily: 'open-sans-regular'
+        fontFamily: 'open-sans-regular',
     },
     subDescricaoTela: {
         width: 335,
