@@ -5,6 +5,7 @@ export default {
   pdmRoxo: '#220A40',
   pdmRoxo1: '#360F66',
   pdmAzul: '#26ACFF',
+  pdmBrancoAcinzentado: '#F2F2F2',
   tintColor,
   tabIconDefault: '#1C81BF',
   tabIconSelected: '#5F1AB2',
