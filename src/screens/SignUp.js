@@ -147,7 +147,6 @@ const styles = StyleSheet.create({
         color: Colors.pdmAzul
     },
     botaoSublinhado: {
-        backgroundColor: Colors.pdmAzul,
-        fontSize: 15
+        backgroundColor: Colors.pdmAzul
     }
 });
