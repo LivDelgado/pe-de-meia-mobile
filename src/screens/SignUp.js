@@ -56,7 +56,7 @@ export default function BeforeLogin() {
                 Pronto para juntar seu pé de meia?
             </Text>
             <Text style={styles.subDescricaoTela}>
-                Pronto para juntar seu pé de meia?
+                Estamos felizes por ter escolhido embarcar nessa jornada.
             </Text>
             <TextInput
                 style={styles.inputStyle}
