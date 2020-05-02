@@ -56,7 +56,7 @@ export default function BeforeLogin() {
                 Pronto para juntar seu pé de meia?
             </Text>
             <Text style={styles.subDescricaoTela}>
-                Pronto para juntar seu pé de meia?
+                Estamos felizes por ter escolhido embarcar nessa jornada.
             </Text>
             <TextInput
                 style={styles.inputStyle}
@@ -121,20 +121,23 @@ const styles = StyleSheet.create({
         alignItems: "center",
         color: '#FFCB0D',
         fontSize: 36.0764,
+        fontFamily: 'roboto-medium',
         marginBottom: 40
     },
     descricaoTela: {
         width: 324,
         marginLeft: 36,
         fontSize: 24.91,
-        color: '#E5E5E5'
+        color: '#E5E5E5',
+        fontFamily: 'open-sans-regular'
     },
     subDescricaoTela: {
         width: 335,
         height: 96,
         marginLeft: 36,
         fontSize: 14,
-        color: '#E6E6E6'
+        color: '#E6E6E6',
+        fontFamily: 'open-sans-regular'
     },
     inputStyle: {
         paddingHorizontal: 20,

@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         color: '#FFCB0D',
         fontSize: 36.0764,
-        marginBottom: 40
+        marginBottom: 40,
+        fontFamily: 'roboto-medium'
     },
     descricaoTela: {
         width: 335,
@@ -130,7 +131,8 @@ const styles = StyleSheet.create({
         marginLeft: 36,
         fontWeight: "bold",
         fontSize: 25.2709,
-        color: '#E6E6E6'
+        color: '#E6E6E6',
+        fontFamily: 'open-sans-regular'
     },
     inputStyle: {
         paddingHorizontal: 20,

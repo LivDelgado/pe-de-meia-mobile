@@ -24,6 +24,17 @@ export default function App(props) {
         await Font.loadAsync({
           ...Ionicons.font,
           'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+          'ubuntu-bold': require('./assets/fonts/Ubuntu-Bold.ttf'),
+          'ubuntu-medium': require('./assets/fonts/Ubuntu-Medium.ttf'),
+          'ubuntu-regular': require('./assets/fonts/Ubuntu-Regular.ttf'),
+          'roboto-bold': require('./assets/fonts/Roboto-Bold.ttf'),
+          'roboto-medium': require('./assets/fonts/Roboto-Medium.ttf'),
+          'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf'),
+          'open-sans-semibold': require('./assets/fonts/OpenSans-SemiBold.ttf'),
+          'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+          'open-sans-light': require('./assets/fonts/OpenSans-Light.ttf'),
+          'open-sans-regular': require('./assets/fonts/OpenSans-Regular.ttf'),
+          'icons-tab': require('./assets/fonts/icomoon.ttf'),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
