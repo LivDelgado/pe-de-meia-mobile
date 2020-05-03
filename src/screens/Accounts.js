@@ -112,8 +112,8 @@ export default function Accounts() {
                     <TouchableOpacity style={styles.buttonStyle}>
                         <View style={styles.iconStyle}>
                             <Icon name={'add'} size={30} color={'#fff'} />
-                        </View>                        
-          
+                        </View>                    
+                        
                         <View style={styles.textButton}>
                             <Text style={[styles.font, styles.textStyle]}> ADICIONAR NOVA CONTA </Text>
                         </View>                        
@@ -195,17 +195,17 @@ const styles = StyleSheet.create({
         height: 40,
         width: 50,
         borderRadius: 5,
-        flexDirection: 'row',
-        justifyContent: "center",
+        justifyContent: 'center',
         alignItems: 'center',
     },
     textButton: {
-        flexDirection: 'column',
-        justifyContent: "center",
+        height: 40,
+        width: '80%',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     textStyle: {
         color: '#5F1AB2',
-        fontSize: 12,
+        fontSize: 14,
     },
 });
