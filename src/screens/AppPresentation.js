@@ -68,7 +68,6 @@ export default function AppPresentation() {
                             backgroundColor: Colors.pdmRoxo,
                             borderRadius: 73.0646,
                         }}
-
                         color = { Colors.pdmAmarelo }
                         disabled = { currentIndex == 2 }
                         disabledStyle = {{
@@ -81,7 +80,6 @@ export default function AppPresentation() {
                         title = "PULAR PARA O FINAL"
                         accessibilityLabel = "Pular a apresentação do aplicativo"
                     />
-            
                     <SideSwipe
                         index = { currentIndex }
                         itemWidth = { width }
