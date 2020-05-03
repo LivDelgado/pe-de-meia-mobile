@@ -21,7 +21,7 @@ const DATA = [
       subtitle: 'Hambúrgueeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer',
       type: 'despesa',
       date: '08/05/2020',
-      value: 29000.10
+      value: 9000.10
     },
     {
       id: '2',
@@ -69,7 +69,7 @@ function Item({ id, title, subtitle, type, date, value, selected, onSelect }) {
             { backgroundColor: selected ? 'F3F3F3' : '#F2F2F2' },
         ]}
         >
-        <View >
+        <View>
             <Text style={styles.title}> {title} </Text>
             <View style={styles.financeView}>
                 <View style={styles.financesText}>
@@ -295,8 +295,7 @@ const styles = StyleSheet.create({
     },
     financeView: {
         display: "flex",
-        flexDirection: "row",
-        minHeight: 90
+        flexDirection: "row"
     },
     financesText: {
         flex: 2,
@@ -304,7 +303,6 @@ const styles = StyleSheet.create({
     },
     financeValue: {
         flex: 1,
-        justifyContent: 'center',
         alignContent: 'center',
         alignItems: 'flex-end'
     },
