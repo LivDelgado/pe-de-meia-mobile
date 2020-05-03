@@ -4,6 +4,8 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import Routes from './src/navigation/Routes';
 import useLinking from './src/navigation/useLinking';
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
