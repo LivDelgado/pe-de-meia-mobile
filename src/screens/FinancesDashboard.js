@@ -17,11 +17,11 @@ import Colors from '../constants/Colors';
 const DATA = [
     {
       id: '1',
-      title: 'Delivery de Comida',
-      subtitle: 'Hambúrguer',
+      title: 'Delivery de Comidaaaaaaaaaaaaaaaaaaaaaaaa',
+      subtitle: 'Hambúrgueeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer',
       type: 'despesa',
       date: '08/05/2020',
-      value: 29.10
+      value: 29000.10
     },
     {
       id: '2',
@@ -45,7 +45,7 @@ const DATA = [
         subtitle: 'Investimento',
         type: 'investimento',
         date: '08/05/2020',
-        value: 29.10
+        value: 290.10
       },
 ];
   
@@ -69,19 +69,21 @@ function Item({ id, title, subtitle, type, date, value, selected, onSelect }) {
             { backgroundColor: selected ? 'F3F3F3' : '#F2F2F2' },
         ]}
         >
-        <View style={styles.financeView}>
-        <View style={styles.financesText}>
+        <View >
             <Text style={styles.title}> {title} </Text>
-            <Text style={styles.subtitle}> {subtitle} </Text>
-            <Text style={styles.date}> {date} </Text>
-        </View>
-        <View style={styles.financeValue}>
-            <Text style={{
-            fontSize: 24,
-            color: getValueColor(type),
-            fontFamily: 'roboto-bold'
-            }}> {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)} </Text>
-        </View>
+            <View style={styles.financeView}>
+                <View style={styles.financesText}>
+                    <Text style={styles.subtitle}> {subtitle} </Text>
+                    <Text style={styles.date}> {date} </Text>
+                </View>
+                <View style={styles.financeValue}>
+                    <Text style={{
+                    fontSize: 24,
+                    color: getValueColor(type),
+                    fontFamily: 'roboto-bold'
+                    }}> {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)} </Text>
+                </View>
+            </View>
         </View>
         </TouchableOpacity>
     );
@@ -293,14 +295,17 @@ const styles = StyleSheet.create({
     },
     financeView: {
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
+        minHeight: 90
     },
     financesText: {
-        width: '70%'
+        flex: 2,
+        maxWidth: '50%'
     },
     financeValue: {
+        flex: 1,
         justifyContent: 'center',
-        alignContent: 'flex-end',
+        alignContent: 'center',
         alignItems: 'flex-end'
     },
     item: {
