@@ -1,67 +1,82 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, Text, Picker } from 'react-native';
+import { View, StyleSheet, TextInput, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Button } from 'react-native-elements';
 import Constants from 'expo-constants';
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
+import Accordian  from '../components/Accordion';
 
 export default function Accounts() {
     const navigation = useNavigation();
 
-    const bankList = [
-        {
-            value: 1,
-            description: 'SELECIONE UM BANCO'
-        },
-        {
-            value: 2,
-            description: 'CAIXA ECONOMICA FEDERAL'
-        },
-        {
-            value: 3,
-            description: 'ITAU UNIBANCO S.A.'
-        },
-        {
-            value: 4,
-            description: 'BADRESCO S.A.'
-        },
-        {
-            value: 5,
-            description: 'BANCO DO BRASIL S.A.'
-        },
-        {
-            value: 6,
-            description: 'NU PAGAMENTOS S.A.'
-        },
-        {
-            value: 7,
-            description: 'INTER S.A.'
-        },
-    ];
+    const bankList = {
+        title: 'SELECIONE UM BANCO',
+        data:[
+            {
+                key: 'CAIXA ECONOMICA FEDERAL',
+                value: false,
+                add: false
+            },
+            {
+                key: 'ITAU UNIBANCO S.A.',
+                value: false,
+                add: false
+            },
+            {
+                key: 'BADRESCO S.A.',
+                value: false,
+                add: false
+            },
+            {
+                key: 'BANCO DO BRASIL S.A.',
+                value: false,
+                add: false
+            },
+            {
+                key: 'NU PAGAMENTOS S.A.',
+                value: false,
+                add: false
+            },
+            {
+                key: 'INTER S.A.',
+                value: false,
+                add: false
+            },
+            {
+                key: 'ADICIONAR NOVA CONTA',
+                value: false,
+                add: true
+            }
+        ]   
+    };
 
-    const accountTypeList = [
-        {
-            value: 1,
-            description: 'SELECIONE O TIPO DE CONTA'
-        },        
-        {
-            value: 2,
-            description: 'CONTA CORRENTE'
-        },
-        {
-            value: 3,
-            description: 'CONTA POUPANÇA'
-        },
-        {
-            value: 4,
-            description: 'CONTA SALÁRIO'
-        },
-    ];
-
-    const [bank, setBank] = useState(bankList[0].description);
-    const [accountType, setAccountType] = useState(accountTypeList[0].description);
+    const accountTypeList = {
+        title: 'SELECIONE O TIPO DE CONTA',
+        data:[
+            {
+                key: 'CONTA CORRENTE',
+                value: false,
+                add: false
+            },
+            {
+                key: 'CONTA POUPANÇA',
+                value: false,
+                add: false
+            },
+            {
+                key: 'CONTA SALÁRIO',
+                value: false,
+                add: false
+            },
+            {
+                key: 'ADICIONAR NOVO TIPO DE CONTA',
+                value: false,
+                add: true
+            },
+        ]
+    };
 
     return (
         <View style = { styles.container }>
@@ -77,40 +92,31 @@ export default function Accounts() {
                         <TextInput style={styles.inputStyle}/>
                     </View>
 
-                    <Text></Text>
+                    <Text/>
 
-                    <View style={styles.pickerView}>
-                        <Picker
-                            style={ styles.picker }
-                            selectedValue={ bank }
-                            onValueChange={(itemValue) => setBank(itemValue)}>{
-                        
-                            bankList.map( (v)=>{
-                                return <Picker.Item label={v.description} value={v.value} />
-                            })}
-                        </Picker>
-                    </View>
+                    <Accordian title = {bankList.title} data = {bankList.data}/>
 
-                    <Text></Text>
+                    <Text/>
 
-                    <View style={styles.pickerView}>
-                        <Picker
-                            style={ styles.picker }
-                            selectedValue={ accountType }
-                            onValueChange={(itemValue) => setAccountType(itemValue)}>{
-                        
-                            accountTypeList.map( (v)=>{
-                                return <Picker.Item label={v.description} value={v.value} />
-                            })}
-                        </Picker>
-                    </View>
+                    <Accordian title = {accountTypeList.title} data = {accountTypeList.data}/>
 
-                    <Text></Text>
+                    <Text/>
 
                     <TextInput
                         multiline={true}
                         numberOfLines={6}
                         style={styles.inputStyle}/>
+
+                    <Text></Text>
+
+                    <TouchableOpacity style={styles.buttonStyle}>
+                        <View style={styles.iconStyle}>
+                            <Icon name={'add'} size={30} color={'#fff'} />
+                        </View>                        
+          
+                        <View style={styles.separatorLine} />
+                        <Text style={styles.textButton}> ADICIONAR NOVA CONTA </Text>
+                    </TouchableOpacity>
                 </View>
 
             </Card>
@@ -151,13 +157,12 @@ const styles = StyleSheet.create({
     currencyText: {
         fontSize: 40,
         color: '#5F1AB2',
-        fontWeight: 'bold',
     },    
     inputStyle: {
         minHeight: 50,
         minWidth: '80%',
         borderColor: '#5F1AB2',
-        borderWidth: 2,
+        borderWidth: 1,
         borderRadius: 10,
         fontFamily: "Roboto",
         fontSize: 15,
@@ -168,11 +173,34 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 10,
         borderStyle: 'solid',
-        borderWidth: 2.7,
+        borderWidth: 1,
         borderColor: '#5F1AB2'
     },
     picker: {
         color: '#5F1AB2',
         width: '100%',        
+    },
+    buttonStyle: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: '#5F1AB2',
+        height: 40,
+        width: 220,
+        borderRadius: 5,
+        margin: 5,
+    },
+    iconStyle: {
+        backgroundColor: '#5F1AB2',
+    },
+    textButton: {
+        color: '#5F1AB2',
+        marginBottom: 4,
+        marginRight: 20,
+    },
+    separatorLine: {
+        backgroundColor: '#5F1AB2',
+        width: 1,
+        height: 40,
     },
 });
