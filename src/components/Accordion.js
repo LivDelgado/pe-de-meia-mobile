@@ -18,7 +18,7 @@ export default class Accordian extends Component{
        <View>
             <TouchableOpacity style={styles.row} onPress={()=>this.toggleExpand()}>
                 <Text style={[styles.title]}>{this.props.title}</Text>
-                <Icon name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'} size={30} color={'#441380'} />
+                <Icon name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'} size={22} color={'#5F1AB3'} />
             </TouchableOpacity>
             <View style={styles.parentHr}/>
             {
@@ -32,7 +32,7 @@ export default class Accordian extends Component{
                             <View>
                                 <TouchableOpacity style={[styles.childRow, styles.button, item.value ? styles.btnInActive : styles.btnActive]} onPress={()=>this.onClick(index)}>
                                     <Text style={[styles.font, styles.itemInActive]} >{item.key}</Text>
-                                    { this.renderIconAdd(item) }
+                                    <Icon name={item.add ? 'add' : 'remove'} size={14} color={ item.value ? '#fff' : '#fff'} />
                                 </TouchableOpacity>
                             </View>
                         }/>
@@ -41,11 +41,6 @@ export default class Accordian extends Component{
             
        </View>
     )
-  }
-
-  renderIconAdd=(item)=> {
-    if(item.add)
-        return <Icon name={'add'} size={24} color={ item.value ? '#fff' : '#fff'} />;
   }
 
   onClick=(index)=>{
@@ -67,14 +62,15 @@ const styles = StyleSheet.create({
     },
     button:{
         width:'100%',
-        height:54,
+        height:40,
         alignItems:'center',
-        paddingLeft:35,
-        paddingRight:35,
-        fontSize: 12,
+        paddingLeft:20,
+        paddingRight:20,
+        fontSize: 10,
+        borderColor: '#441380',
     },
     title:{
-        fontSize: 14,
+        fontSize: 12,
         color: '#5F1AB3',
     },
     itemActive:{
@@ -94,13 +90,14 @@ const styles = StyleSheet.create({
     row:{
         flexDirection: 'row',
         justifyContent:'space-between',
-        height:56,
+        height:45,
+        width:250,
         paddingLeft:25,
         paddingRight:18,
         alignItems:'center',
-        borderColor:'#441380',
+        borderColor:'#5F1AB3',
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 5,
     },
     childRow:{
         flexDirection: 'row',
@@ -117,6 +114,5 @@ const styles = StyleSheet.create({
     },
     colorInActive:{
         borderColor: '#5F1AB3',
-    }
-    
+    },    
 });

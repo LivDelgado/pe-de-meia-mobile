@@ -82,11 +82,11 @@ export default function Accounts() {
         <View style = { styles.container }>
 
             <Card>
-                <Text style={styles.cardHeaderTitle}>ADICIONE UMA NOVA CONTA E SEUS DADOS</Text>
+                <Text style={[styles.font, styles.cardHeaderTitle]}>ADICIONE UMA NOVA CONTA E SEUS DADOS</Text>
 
                 <View style={styles.cardBody}>
 
-                    <Text style={styles.title}>SALDO DA CONTA: </Text>
+                    <Text style={[styles.font, styles.title]}>SALDO DA CONTA: </Text>
                     <View style={styles.currency}>
                         <Text style={styles.currencyText}>R$: </Text>
                         <TextInput style={styles.inputStyle}/>
@@ -104,8 +104,8 @@ export default function Accounts() {
 
                     <TextInput
                         multiline={true}
-                        numberOfLines={6}
-                        style={styles.inputStyle}/>
+                        numberOfLines={5}
+                        style={styles.textareaStyle}/>
 
                     <Text></Text>
 
@@ -114,8 +114,9 @@ export default function Accounts() {
                             <Icon name={'add'} size={30} color={'#fff'} />
                         </View>                        
           
-                        <View style={styles.separatorLine} />
-                        <Text style={styles.textButton}> ADICIONAR NOVA CONTA </Text>
+                        <View style={styles.textButton}>
+                            <Text style={[styles.font, styles.textStyle]}> ADICIONAR NOVA CONTA </Text>
+                        </View>                        
                     </TouchableOpacity>
                 </View>
 
@@ -138,47 +139,46 @@ const styles = StyleSheet.create({
         color: '#999999',
     }, 
     cardBody: {        
-        paddingTop: 16,
-        marginTop: 16,
+        paddingTop: 30,
+        marginTop: 20,
         borderTopWidth: 1,
         borderTopColor: '#eee',
-        maxWidth: '96%',
+        width:250,
+        flexDirection: 'column',
+        alignItems: 'center',
     },
     title: {
         fontSize: 15,
         color: '#5F1AB2',
         textAlign: 'right',
+        paddingBottom: 10,
     },
     currency:{
-        alignItems: "center",
-        marginTop: 16,
         flexDirection: 'row',
+        alignItems: "center",
     },
     currencyText: {
-        fontSize: 40,
+        fontSize: 30,
         color: '#5F1AB2',
     },    
     inputStyle: {
-        minHeight: 50,
+        height: 45,
         minWidth: '80%',
         borderColor: '#5F1AB2',
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 5,
         fontFamily: "Roboto",
         fontSize: 15,
         color: '#5F1AB3'
     },
-    pickerView: {
+    textareaStyle: {
         width: '100%',
-        alignItems: 'center',
-        borderRadius: 10,
-        borderStyle: 'solid',
+        borderColor: '#5F1AB2',
         borderWidth: 1,
-        borderColor: '#5F1AB2'
-    },
-    picker: {
-        color: '#5F1AB2',
-        width: '100%',        
+        borderRadius: 5,
+        fontFamily: "Roboto",
+        fontSize: 15,
+        color: '#5F1AB3'
     },
     buttonStyle: {
         flexDirection: 'row',
@@ -186,21 +186,26 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#5F1AB2',
         height: 40,
-        width: 220,
+        width: '100%',
         borderRadius: 5,
         margin: 5,
     },
     iconStyle: {
         backgroundColor: '#5F1AB2',
+        height: 40,
+        width: 50,
+        borderRadius: 5,
+        flexDirection: 'row',
+        justifyContent: "center",
+        alignItems: 'center',
     },
     textButton: {
-        color: '#5F1AB2',
-        marginBottom: 4,
-        marginRight: 20,
+        flexDirection: 'column',
+        justifyContent: "center",
+        alignItems: 'center',
     },
-    separatorLine: {
-        backgroundColor: '#5F1AB2',
-        width: 1,
-        height: 40,
+    textStyle: {
+        color: '#5F1AB2',
+        fontSize: 12,
     },
 });

@@ -24,7 +24,11 @@ const styles = StyleSheet.create({
     marginVertical: 6,
   },
   cardContent: {
-    marginHorizontal: 18,
+    flex: 1,
+    alignItems: 'center',
+    marginHorizontal: 20,
     marginVertical: 20,
+    maxWidth:'90%',
+    maxHeight:'90%'    
   }
 });
