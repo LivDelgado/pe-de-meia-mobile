@@ -201,17 +201,17 @@ export default function FinancesDashboard() {
                                 },
                                 ],
                             }}
-                            width={Dimensions.get('screen').width - 60}
-                            height={220}
+                            width={ Dimensions.get('screen').width * 0.8 }
+                            height={110}
                             yAxisLabel={'R$'}
                             chartConfig={{
-                                backgroundColor: '#fff',
-                                backgroundGradientFrom: '#fff',
-                                backgroundGradientTo: '#fff',
+                                backgroundColor: 'transparent',
+                                backgroundGradientFrom: '#f2f2f2',
+                                backgroundGradientTo: '#f2f2f2',
                                 decimalPlaces: 2,
                                 color: (opacity = 1) => `rgba(54, 15, 102, ${opacity})`,
                                 style: {
-                                borderRadius: 16,
+                                    borderRadius: 16,
                                 },
                             }}
                             style={{
